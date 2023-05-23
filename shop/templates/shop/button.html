@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flopkart</title>
+</head>
+<body>
+    <form action="/shop/sorting/" method="POST" id="formOne">
+        {% csrf_token %}
+        <input type="hidden" name="form_type" value="formOne">
+        <label for="vol">Volume (between 0 and 50,000):</label>
+        <input type="range" id="vol" name="vol" min="0" max="50000">
+        <input type="submit" value="Submit">
+    </form>
+    <form action="/shop/sorting/" method="POST" id="formTwo">
+        {% csrf_token %}
+        <input type="hidden" name="form_type" value="formTwo">
+        <input type="submit" value="Sort by price high to low">
+    </form>     
+</body>
+</html>
